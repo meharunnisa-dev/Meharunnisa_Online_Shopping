@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Meharunnisa Online Shopping</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        Meharunnisa<span>Shop</span>
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="products.html">
+            Products
+        </a>
+
+        <a href="categories.html">
+            Categories
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="cart.html">
+            🛒 Cart
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= CHECKOUT BANNER ================= -->
+
+<section class="page-banner">
+
+    <h1>
+        Checkout
+    </h1>
+
+    <p>
+        Complete your details to place your order.
+    </p>
+
+</section>
+
+
+
+<!-- ================= CHECKOUT SECTION ================= -->
+
+<section class="checkout-section">
+
+    <div class="checkout-container">
+
+
+        <!-- ================= DELIVERY DETAILS ================= -->
+
+        <div class="checkout-form">
+
+            <h2>
+                Delivery Details
+            </h2>
+
+
+            <form id="checkoutForm">
+
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+
+
+                <label>
+                    Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    placeholder="Enter your mobile number"
+                    required
+                >
+
+
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+
+                <label>
+                    Delivery Address
+                </label>
+
+                <textarea
+                    id="address"
+                    placeholder="Enter your complete delivery address"
+                    required
+                ></textarea>
+
+
+
+                <div class="checkout-row">
+
+                    <div>
+
+                        <label>
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="City"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            PIN Code
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pincode"
+                            placeholder="PIN Code"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= PAYMENT ================= -->
+
+                <h2 class="payment-title">
+                    Payment Method
+                </h2>
+
+
+                <div class="payment-option">
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="Cash on Delivery"
+                            checked
+                        >
+
+                        <span>
+
+                            <strong>
+                                Cash on Delivery
+                            </strong>
+
+                            <small>
+                                Pay when your order arrives
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <div class="payment-option">
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="Online Payment"
+                        >
+
+                        <span>
+
+                            <strong>
+                                Online Payment
+                            </strong>
+
+                            <small>
+                                Demo option for this website
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- ================= PLACE ORDER ================= -->
+
+                <button
+                    type="submit"
+                    class="place-order-btn">
+
+                    Place Order
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+
+
+        <!-- ================= ORDER SUMMARY ================= -->
+
+        <div class="order-summary">
+
+            <h2>
+                Order Summary
+            </h2>
+
+
+            <div id="checkoutItems">
+
+                <!-- Products will appear here -->
+
+            </div>
+
+
+            <div class="checkout-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="checkoutTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div>
+
+            <h2>
+                Meharunnisa<span>Shop</span>
+            </h2>
+
+            <p>
+                Elegant shopping,
+                simple experience.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                meharunnisashop@example.com
+            </p>
+
+            <p>
+                Monday – Saturday
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Meharunnisa Online Shopping
+        | B.Tech Project
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    // Get cart from localStorage
+
+    let checkoutCart =
+        JSON.parse(
+            localStorage.getItem("meharunnisaCart")
+        ) || [];
+
+
+    const checkoutItems =
+        document.getElementById("checkoutItems");
+
+    const checkoutTotal =
+        document.getElementById("checkoutTotal");
+
+
+    // =====================================
+    // DISPLAY ORDER SUMMARY
+    // =====================================
+
+    function displayCheckout() {
+
+        checkoutItems.innerHTML = "";
+
+        let total = 0;
+
+
+        checkoutCart.forEach(function(item) {
+
+            const itemTotal =
+                item.price * item.quantity;
+
+            total += itemTotal;
+
+
+            checkoutItems.innerHTML += `
+
+                <div class="checkout-item">
+
+                    <div>
+
+                        <h3>
+                            ${item.name}
+                        </h3>
+
+                        <p>
+                            ₹${item.price}
+                            × ${item.quantity}
+                        </p>
+
+                    </div>
+
+
+                    <strong>
+                        ₹${itemTotal}
+                    </strong>
+
+                </div>
+
+            `;
+
+        });
+
+
+        checkoutTotal.textContent =
+            "₹" + total;
+
+    }
+
+
+    displayCheckout();
+
+
+
+    // =====================================
+    // PLACE ORDER
+    // =====================================
+
+    document
+        .getElementById("checkoutForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const paymentMethod =
+                document.querySelector(
+                    'input[name="payment"]:checked'
+                ).value;
+
+
+            alert(
+                "Order placed successfully! 🛍️\n\n" +
+                "Payment Method: " +
+                paymentMethod +
+                "\n\n" +
+                "Thank you for shopping with Meharunnisa Shop!"
+            );
+
+
+            // Empty cart after order
+
+            localStorage.removeItem(
+                "meharunnisaCart"
+            );
+
+
+            // Go back to home page
+
+            window.location.href =
+                "index.html";
+
+        });
+
+</script>
+
+
+</body>
+
+</html>
